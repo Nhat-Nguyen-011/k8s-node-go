@@ -1,0 +1,13 @@
+{
+  "name": "node-api-gateway",
+  "version": "1.0.0",
+  "description": "Node.js api gateway",
+  "author": "Tyrell",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
