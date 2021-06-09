@@ -1,0 +1,15 @@
+version: "3.5"
+services:
+  api-gateway:
+    container_name: "node-api-gateway"
+    restart: on-failure
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm run dev
+    ports:
+      - "3000:8080"
+networks:
+  default:
+    name: "k8s-practice"
