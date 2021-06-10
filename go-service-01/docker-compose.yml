@@ -1,0 +1,12 @@
+version: "3.5"
+services:
+  go-service-01:
+    container_name: "go-service-01"
+    restart: on-failure
+    build: .
+    volumes:
+      - .:/app
+    command: go run main.go
+networks:
+  default:
+    name: "k8s-practice"

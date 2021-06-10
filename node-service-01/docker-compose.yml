@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  node-service-01:
+    container_name: "node-service-01"
+    restart: on-failure
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm run dev
+networks:
+  default:
+    name: "k8s-practice"
